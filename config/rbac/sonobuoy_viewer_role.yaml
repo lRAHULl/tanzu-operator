@@ -1,0 +1,20 @@
+# permissions for end users to view sonobuoy.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sonobuoy-viewer-role
+rules:
+- apiGroups:
+  - tanzu.coda.global
+  resources:
+  - sonobuoy
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - tanzu.coda.global
+  resources:
+  - sonobuoy/status
+  verbs:
+  - get

@@ -1,0 +1,17 @@
+domain: coda.global
+layout:
+- go.kubebuilder.io/v3
+projectName: tanzu-operator
+repo: tanzu-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: coda.global
+  group: tanzu
+  kind: Sonobuoy
+  path: tanzu-operator/api/v1alpha1
+  plural: sonobuoy
+  version: v1alpha1
+version: "3"

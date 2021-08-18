@@ -1,0 +1,24 @@
+# permissions for end users to edit sonobuoy.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: sonobuoy-editor-role
+rules:
+- apiGroups:
+  - tanzu.coda.global
+  resources:
+  - sonobuoy
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - tanzu.coda.global
+  resources:
+  - sonobuoy/status
+  verbs:
+  - get

@@ -1,0 +1,14 @@
+apiVersion: tanzu.coda.global/v1alpha1
+kind: Sonobuoy
+metadata:
+  name: tanzu-management-cluster-1
+spec:
+  namespace: default # Namespace to create the pod (that runs sonobuoy in)
+  resources:
+    limits:
+      memory: 50Mi
+      cpu: 1
+  sonobuoyMode: run # Available commands - status,retrieve,e2e,etc..
+  sonobuoyOptions: # Flags
+    '--wait': ''
+    '--wait-output': progress
