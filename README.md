@@ -7,7 +7,7 @@ Creates a pod from which sonobuoy is run onto the cluster
 To deploy this operator onto your cluster, run
 
 ```bash
-make deploy IMG=rahulraju/test-tanzu-operator:0.0.2
+make deploy IMG=rahulraju/test-tanzu-operator:0.1.0
 ```
 
 After the CRDs and Controller is deployed, try creating a sample resource
